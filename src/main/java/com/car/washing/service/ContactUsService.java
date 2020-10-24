@@ -1,8 +1,8 @@
-package com.egypt.daily.life.shopping.service;
+package com.car.washing.service;
 
 import java.util.List;
 
-import com.egypt.daily.life.shopping.model.ContactUs;
+import com.car.washing.model.ContactUs;
 
 public interface ContactUsService {
 

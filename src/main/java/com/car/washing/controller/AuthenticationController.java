@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.controller;
+package com.car.washing.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.egypt.daily.life.shopping.domain.UserDTO;
-import com.egypt.daily.life.shopping.exception.UnauthorizedException;
-import com.egypt.daily.life.shopping.model.User;
-import com.egypt.daily.life.shopping.security.JwtTokenUtil;
-import com.egypt.daily.life.shopping.security.JwtUser;
+import com.car.washing.domain.UserDTO;
+import com.car.washing.exception.UnauthorizedException;
+import com.car.washing.model.User;
+import com.car.washing.security.JwtTokenUtil;
+import com.car.washing.security.JwtUser;
 
 @RestController
 public class AuthenticationController {

@@ -1,11 +1,11 @@
-package com.egypt.daily.life.shopping.repository;
+package com.car.washing.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.egypt.daily.life.shopping.model.UserMessages;
+import com.car.washing.model.UserMessages;
 
 @Repository
 public interface UserMessagesRepository extends CrudRepository<UserMessages, Long>{

@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.domain;
+package com.car.washing.domain;
 
 import java.io.Serializable;
 

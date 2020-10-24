@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.security;
+package com.car.washing.security;
 
 import java.io.Serializable;
 import java.util.Date;

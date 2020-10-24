@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.interceptor;
+package com.car.washing.interceptor;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.egypt.daily.life.shopping.security.JwtTokenUtil;
+import com.car.washing.security.JwtTokenUtil;
 
 public class AuthenticationTokenFilter extends OncePerRequestFilter{
 

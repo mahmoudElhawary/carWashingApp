@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.security;
+package com.car.washing.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.egypt.daily.life.shopping.model.User;
-import com.egypt.daily.life.shopping.repository.UserRepository;
+import com.car.washing.model.User;
+import com.car.washing.repository.UserRepository;
 
 @Service
 public class JwtUserDetailsServiceImpl implements UserDetailsService{

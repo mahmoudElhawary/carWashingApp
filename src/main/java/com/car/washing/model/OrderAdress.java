@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.model;
+package com.car.washing.model;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class UserAdress implements Serializable{
+public class OrderAdress implements Serializable{
 	/**
 	 * 
 	 */
@@ -23,6 +23,7 @@ public class UserAdress implements Serializable{
     private String city;
     private String state;
     private String country;
+    
     @OneToOne(targetEntity=User.class) 
     private User user;
     

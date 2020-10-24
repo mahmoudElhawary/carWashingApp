@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.egypt.daily.life.shopping</groupId>
-	<artifactId>egypt.daily.life.shopping</artifactId>
+	<groupId>com.car.washing</groupId>
+	<artifactId>com.car.washing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>EgyptDailyLifeShopping</name>
-	<description>Egypt Daily Life Shopping Application</description>
+	<name>carWashingApp</name>
+	<description>car Washing App</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

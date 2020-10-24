@@ -1,9 +1,9 @@
-package com.egypt.daily.life.shopping.repository;
+package com.car.washing.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.egypt.daily.life.shopping.model.ContactUs;
+import com.car.washing.model.ContactUs;
 
 @Repository
 public interface ContactUsRepository extends JpaRepository<ContactUs, Long>{

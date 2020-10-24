@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.controller;
+package com.car.washing.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.egypt.daily.life.shopping.domain.Response;
-import com.egypt.daily.life.shopping.model.User;
-import com.egypt.daily.life.shopping.model.UserMessages;
-import com.egypt.daily.life.shopping.service.UserMessagesService;
-import com.egypt.daily.life.shopping.service.UserService;
+import com.car.washing.domain.Response;
+import com.car.washing.model.User;
+import com.car.washing.model.UserMessages;
+import com.car.washing.service.UserMessagesService;
+import com.car.washing.service.UserService;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

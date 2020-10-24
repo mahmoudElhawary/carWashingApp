@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.controller;
+package com.car.washing.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.egypt.daily.life.shopping.domain.Response;
-import com.egypt.daily.life.shopping.model.ContactUs;
-import com.egypt.daily.life.shopping.service.ContactUsService;
+import com.car.washing.domain.Response;
+import com.car.washing.model.ContactUs;
+import com.car.washing.service.ContactUsService;
 
 @RestController
 public class ContactUsController {

@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.security;
+package com.car.washing.security;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import com.egypt.daily.life.shopping.model.User;
+import com.car.washing.model.User;
 
 public class JwtUserFactory {
 

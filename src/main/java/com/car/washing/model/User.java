@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.model;
+package com.car.washing.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,7 +12,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -30,13 +29,9 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String firstName;
-	private String lastName;
+	private String fullName;
 	@Column(unique = true)
 	private String email;
-	private String gender;
-	
-	private String profilePrivacy ;
 	
 	private String phoneNumber;
 	@Lob
@@ -45,65 +40,28 @@ public class User implements Serializable{
 	
 	private String password;
 	private boolean enabled;
+	private boolean isWaiting ;
+	private boolean isOnline ;
 	private String role;
 	private Date createdDate;
 	private Date updatedDate;
-
-	private Long age ;
 	
 	@OneToMany(mappedBy = "user", targetEntity = UserMessages.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<UserMessages> userMessages;
 
-	@OneToOne(targetEntity=UserSocialMedia.class,cascade=CascadeType.ALL) 
-	private UserSocialMedia userSocialMedias;
-
-	@OneToOne(targetEntity=UserAdress.class,cascade=CascadeType.ALL) 
-	private UserAdress userAdresses;
+	@OneToOne(targetEntity=Driver.class,cascade=CascadeType.ALL) 
+	private Driver driver;
 	
-	@OneToOne
-	@JoinColumn(name = "cartId")
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	@JsonIgnore
-	private Cart cart;
-
-	@OneToMany(mappedBy = "user")
-	@JsonIgnore
-	private List<ProductComment> productComments;
-
-	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
-	@JsonIgnore
-	private List<ShippingAddress> shippingAddresses;
+	private List<Orders> orders;
 	
-	
-	@OneToMany(mappedBy = "userClass", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
-	private List<UserProducts> userProducts;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
-	private List<SelectedUserProducts> selectedUserProducts;
-
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -154,52 +112,12 @@ public class User implements Serializable{
 		this.updatedDate = updatedDate;
 	}
 
-	public Cart getCart() {
-		return cart;
-	}
-
-	public void setCart(Cart cart) {
-		this.cart = cart;
-	}
-
-	public List<ProductComment> getProductComments() {
-		return productComments;
-	}
-
-	public void setProductComments(List<ProductComment> productComments) {
-		this.productComments = productComments;
-	}
-
-	public List<ShippingAddress> getShippingAddresses() {
-		return shippingAddresses;
-	}
-
-	public void setShippingAddresses(List<ShippingAddress> shippingAddresses) {
-		this.shippingAddresses = shippingAddresses;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
 	public byte[] getUserPhoto() {
 		return userPhoto;
 	}
 
 	public void setUserPhoto(byte[] userPhoto) {
 		this.userPhoto = userPhoto;
-	}
-
-	public UserAdress getUserAdresses() {
-		return userAdresses;
-	}
-
-	public void setUserAdresses(UserAdress userAdresses) {
-		this.userAdresses = userAdresses;
 	}
 
 	public List<UserMessages> getUserMessages() {
@@ -210,38 +128,6 @@ public class User implements Serializable{
 		this.userMessages = userMessages;
 	}
 
-	public List<UserProducts> getUserProducts() {
-		return userProducts;
-	}
-
-	public void setUserProducts(List<UserProducts> userProducts) {
-		this.userProducts = userProducts;
-	}
-
-	public UserSocialMedia getUserSocialMedias() {
-		return userSocialMedias;
-	}
-
-	public void setUserSocialMedias(UserSocialMedia userSocialMedias) {
-		this.userSocialMedias = userSocialMedias;
-	}
-
-	public Long getAge() {
-		return age;
-	}
-
-	public void setAge(Long age) {
-		this.age = age;
-	}
-
-	public String getProfilePrivacy() {
-		return profilePrivacy;
-	}
-
-	public void setProfilePrivacy(String profilePrivacy) {
-		this.profilePrivacy = profilePrivacy;
-	}
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -250,12 +136,36 @@ public class User implements Serializable{
 		this.phoneNumber = phoneNumber;
 	}
 
-	public List<SelectedUserProducts> getSelectedUserProducts() {
-		return selectedUserProducts;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setSelectedUserProducts(List<SelectedUserProducts> selectedUserProducts) {
-		this.selectedUserProducts = selectedUserProducts;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public boolean isWaiting() {
+		return isWaiting;
+	}
+
+	public void setWaiting(boolean isWaiting) {
+		this.isWaiting = isWaiting;
+	}
+
+	public boolean isOnline() {
+		return isOnline;
+	}
+
+	public void setOnline(boolean isOnline) {
+		this.isOnline = isOnline;
+	}
+
+	public List<Orders> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Orders> orders) {
+		this.orders = orders;
 	}
 	
 	

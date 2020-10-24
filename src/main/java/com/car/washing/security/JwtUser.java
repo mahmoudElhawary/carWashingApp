@@ -1,11 +1,11 @@
-package com.egypt.daily.life.shopping.security;
+package com.car.washing.security;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.egypt.daily.life.shopping.model.User;
+import com.car.washing.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class JwtUser implements UserDetails{

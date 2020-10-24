@@ -1,8 +1,8 @@
-package com.egypt.daily.life.shopping.domain;
+package com.car.washing.domain;
 
 import java.io.Serializable;
 
-import com.egypt.daily.life.shopping.model.User;
+import com.car.washing.model.User;
 
 public class UserDTO implements Serializable{
 

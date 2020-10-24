@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping;
+package com.car.washing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +17,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.csrf.CsrfFilter;
 
-import com.egypt.daily.life.shopping.interceptor.AuthenticationTokenFilter;
-import com.egypt.daily.life.shopping.security.CsrfHeaderFilter;
-import com.egypt.daily.life.shopping.security.JwtAuthenticationEntryPoint;
+import com.car.washing.interceptor.AuthenticationTokenFilter;
+import com.car.washing.security.CsrfHeaderFilter;
+import com.car.washing.security.JwtAuthenticationEntryPoint;
 
 @Configuration
 @EnableWebSecurity

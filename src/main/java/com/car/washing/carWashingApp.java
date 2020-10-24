@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping;
+package com.car.washing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
-public class EgyptDailyLifeShopping{
+public class carWashingApp{
 
 	public static void main(String[] args) {
-		SpringApplication.run(EgyptDailyLifeShopping.class, args);
+		SpringApplication.run(carWashingApp.class, args);
 	}
 	@Bean
 	public CorsFilter corsFilter() {

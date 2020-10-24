@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.model;
+package com.car.washing.model;
 
 import java.io.Serializable;
 import java.util.Date;

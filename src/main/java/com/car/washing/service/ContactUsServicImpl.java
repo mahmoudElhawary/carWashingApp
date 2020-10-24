@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.service;
+package com.car.washing.service;
 
 import java.util.Date;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.egypt.daily.life.shopping.model.ContactUs;
-import com.egypt.daily.life.shopping.repository.ContactUsRepository;
+import com.car.washing.model.ContactUs;
+import com.car.washing.repository.ContactUsRepository;
 
 @Service
 @Transactional

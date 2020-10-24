@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.controller;
+package com.car.washing.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.egypt.daily.life.shopping.domain.Response;
-import com.egypt.daily.life.shopping.model.User;
-import com.egypt.daily.life.shopping.service.UserService;
+import com.car.washing.domain.Response;
+import com.car.washing.model.User;
+import com.car.washing.service.UserService;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +37,19 @@ public class PreLoginController {
 			userData.setUserPhoto(userFile.getBytes());
 			userData.setCreatedDate(new Date());
 			userService.save(userData);
+			List<User> users = userService.findAll() ;
+			return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+		} else {
+			return null;
+		}
+	}
+	
+	@PostMapping("/signupPostman")
+	public ResponseEntity<List<User>> signupPostman(@RequestBody User user) throws JsonParseException, JsonMappingException, IOException {
+		// get product data from rest api
+		if (user != null) {
+			user.setCreatedDate(new Date());
+			userService.save(user);
 			List<User> users = userService.findAll() ;
 			return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 		} else {

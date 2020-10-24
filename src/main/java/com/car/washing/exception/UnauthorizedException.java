@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.exception;
+package com.car.washing.exception;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.SpringSecurityMessageSource;

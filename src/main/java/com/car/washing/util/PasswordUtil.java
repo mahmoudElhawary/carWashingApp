@@ -1,4 +1,4 @@
-package com.egypt.daily.life.shopping.util;
+package com.car.washing.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
